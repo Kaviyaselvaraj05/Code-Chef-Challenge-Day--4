@@ -1,0 +1,940 @@
+01)2000:
+Chef had collected 
+𝑁
+N notes of Rs. 
+2000
+2000 to pay his total college fees. However, the government banned Rs. 
+2000
+2000 notes.
+
+Chef wants to pay the same amount using Rs. 
+500
+500 notes only. Find the number of notes Chef needs.
+
+Input Format
+Each test case consists of a single integer 
+𝑁
+N - the number of notes of Rs. 
+2000
+2000 that Chef has collected.
+
+Output Format
+Output a single integer - the number of Rs. 
+500
+500 notes needed.
+
+Constraints
+1
+≤
+𝑁
+≤
+100
+1≤N≤100
+Sample 1:
+Input
+Output
+4
+16
+Explanation:
+4
+4 notes of Rs. 
+2000
+2000 make a total of 
+4
+⋅
+2000
+=
+8000
+4⋅2000=8000 rupees. This is equivalent to 
+16
+16 notes of Rs. 
+500
+500.
+
+ANSWER:
+a=int(input())
+print(a*4)
+
+02)Roller Coaster:
+Chef's son wants to go on a roller coaster ride. The height of Chef's son is 
+𝑋
+X inches while the minimum height required to go on the ride is 
+𝐻
+H inches. Determine whether he can go on the ride or not.
+
+Input Format
+The first line contains a single integer 
+𝑇
+T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two integers 
+𝑋
+X and 
+𝐻
+H - the height of Chef's son and the minimum height required for the ride respectively.
+Output Format
+For each test case, output in a single line, YES if Chef's son can go on the ride. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical)
+
+Constraints
+1
+≤
+𝑇
+≤
+1000
+1≤T≤1000
+1
+≤
+𝑋
+,
+𝐻
+≤
+100
+1≤X,H≤100
+Sample 1:
+Input
+Output
+4
+15 20
+50 48
+32 32
+38 39
+NO
+YES
+YES
+NO
+Explanation:
+Test case 1: Chef's son can not go on the ride as his height 
+<
+< the minimum required height.
+
+Test case 2: Chef's son can go on the ride as his height 
+≥
+≥ the minimum required height.
+
+Test case 3: Chef's son can go on the ride as his height 
+≥
+≥ the minimum required height.
+
+Test case 4: Chef's son can not go on the ride as his height 
+<
+< the minimum required height.
+
+ANSWER:
+num =int(input())
+for i in range(num):
+    a=input()
+    b=a.split()
+    if int(b[0])>=int(b[1]):
+        print("yes")
+    else:
+        print("no")
+
+03)Candy Division
+There are three friends and a total of 
+𝑁
+N candies.
+There will be a fight amongst the friends if all of them do not get the same number of candies.
+
+Chef wants to divide all the candies such that there is no fight. Find whether such distribution is possible.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of a single integer 
+𝑁
+N - the number of candies.
+Output Format
+For each test case, output YES, if we can distribute all the candies between the three friends equally. Otherwise output NO.
+
+You can output each character of the answer in uppercase or lowercase. For example, the strings yEs, yes, Yes, and YES are considered the same.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑁
+≤
+100
+1≤N≤100
+Sample 1:
+Input
+Output
+4
+3
+4
+2
+6
+YES
+NO
+NO
+YES
+Explanation:
+Test case 
+1
+1: Chef can distribute all 
+3
+3 candies such that each friend gets 
+1
+1 candy. Since all three friends have same number of candies, there is no fight.
+
+Test case 
+2
+2: There exist no way of distributing all candies such that all three friends have same number of candies.
+
+Test case 
+3
+3: There exist no way of distributing all candies such that all three friends have same number of candies.
+
+Test case 
+4
+4: Chef can distribute all 
+6
+6 candies such that each friend gets 
+2
+2 candies. Since all three friends have same number of candies, there is no fight.
+
+ANSWER:
+t = int(input())
+for i in range(t):
+    x = int(input())
+    if (x % 3):
+        print("NO")
+    else:
+        print("YES")
+
+04)Chef On Date:
+Chef and his girlfriend went on a date. Chef took 
+𝑋
+X dollars with him, and was quite sure that this would be enough to pay the bill. At the end, the waiter brought a bill of 
+𝑌
+Y dollars. Print "YES" if Chef has enough money to pay the bill, or "NO" if he has to borrow from his girlfriend and leave a bad impression on her.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of a single line of input, containing two space-separated integers 
+𝑋
+X and 
+𝑌
+Y.
+Output Format
+For each test case, output on a new line "YES" if Chef has enough money to pay the bill and "NO" otherwise.
+
+You may print each character of the string in either uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑋
+,
+𝑌
+≤
+100
+1≤X,Y≤100
+Sample 1:
+Input
+Output
+4
+1 1
+1 2
+2 1
+50 100
+YES
+NO
+YES
+NO
+Explanation:
+Test case 
+1
+1: Since the money Chef has is equal to the bill, he will be able to pay the bill.
+
+Test case 
+2
+2: Since the money Chef has is less than the bill, he will have to borrow from his girlfriend and leave a bad impression on her.
+
+Test case 
+3
+3: Since the money Chef has is greater than the bill, he will be able to pay the bill.
+
+Test case 
+4
+4: Since the money Chef has is less than the bill, he will have to borrow from his girlfriend and leave a bad impression on her.
+
+ANSWER:
+t = int(input())
+for i in range(t):
+    x, y = map(int, input().split())
+    if (y > x):
+        print("NO")
+    else:
+        print("YES")
+
+05)Parity:
+Ashu and Arvind participated in a coding contest, as a result of which they received 
+𝑁
+N chocolates. Now they want to divide the chocolates between them equally.
+
+Can you help them by deciding if it is possible for them to divide all the 
+𝑁
+N chocolates in such a way that they each get an equal number of chocolates?
+
+You cannot break a chocolate in two or more pieces.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+The first and only line of each test case contains a single integer 
+𝑁
+N — the number of chocolates they received.
+Output Format
+For each test case output the answer on a new line — "Yes" (without quotes) if they can divide chocolates between them equally, and "No" (without quotes) otherwise.
+
+Each letter of the output may be printed in either uppercase or lowercase, i.e, "Yes", "YES", and "yEs" will all be treated as equivalent.
+
+Constraints
+1
+≤
+𝑇
+≤
+10
+1≤T≤10
+1
+≤
+𝑁
+≤
+10
+1≤N≤10
+Sample 1:
+Input
+Output
+4
+10
+4
+3
+2
+Yes
+Yes
+No
+Yes
+Explanation:
+Test case 
+1
+1: They can divide 
+10
+10 chocolates such that both of them get 
+5
+5 chocolates each.
+
+Test case 
+2
+2: They can divide 
+4
+4 chocolates such that both of them get 
+2
+2 chocolates each.
+
+Test case 
+3
+3: There is no way to divide 
+3
+3 chocolates so that they get equal number of chocolates.
+
+Test case 
+4
+4: They can divide 
+2
+2 chocolates such that both of them get 
+1
+1 chocolate each.
+
+ANSWER:
+for i in range(int(input())):
+    a=int(input())
+    if(a%2==0):
+        print("Yes")
+    else:
+        print("No")
+
+06)Total Prize Money
+In a coding contest, there are prizes for the top rankers. The prize scheme is as follows:
+
+Top 
+10
+10 participants receive rupees 
+𝑋
+X each.
+Participants with rank 
+11
+11 to 
+100
+100 (both inclusive) receive rupees 
+𝑌
+Y each.
+Find the total prize money over all the contestants.
+
+Input Format
+First line will contain 
+𝑇
+T, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, two integers 
+𝑋
+X and 
+𝑌
+Y - the prize for top 
+10
+10 rankers and the prize for ranks 
+11
+11 to 
+100
+100 respectively.
+Output Format
+For each test case, output the total prize money over all the contestants.
+
+Constraints
+1
+≤
+𝑇
+≤
+1000
+1≤T≤1000
+1
+≤
+𝑌
+≤
+𝑋
+≤
+1000
+1≤Y≤X≤1000
+Sample 1:
+Input
+Output
+4
+1000 100
+1000 1000
+80 1
+400 30
+19000
+100000
+890
+6700
+Explanation:
+Test Case 
+1
+1: Top 
+10
+10 participants receive rupees 
+1000
+1000 and next 
+90
+90 participants receive rupees 
+100
+100 each. So, total prize money 
+=
+10
+⋅
+1000
++
+90
+⋅
+100
+=
+19000
+=10⋅1000+90⋅100=19000.
+
+Test Case 
+2
+2: Top 
+10
+10 participants receive rupees 
+1000
+1000 and next 
+90
+90 participants receive rupees 
+1000
+1000 each. So, total prize money 
+=
+10
+⋅
+1000
++
+90
+⋅
+1000
+=
+100000
+=10⋅1000+90⋅1000=100000.
+
+Test Case 
+3
+3: Top 
+10
+10 participants receive rupees 
+80
+80 and next 
+90
+90 participants receive rupee 
+1
+1 each. So, total prize money 
+=
+10
+⋅
+80
++
+90
+⋅
+1
+=
+890
+=10⋅80+90⋅1=890.
+
+Test Case 
+4
+4: Top 
+10
+10 participants receive rupees 
+400
+400 and next 
+90
+90 participants receive rupees 
+30
+30 each. So, total prize money 
+=
+10
+⋅
+400
++
+90
+⋅
+30
+=
+6700
+=10⋅400+90⋅30=6700.
+
+ANSWER:
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    print(x*10+90*y)
+
+07)Counting Words
+Harsh was recently gifted a book consisting of 
+𝑁
+N pages. Each page contains exactly 
+𝑀
+M words printed on it. As he was bored, he decided to count the number of words in the book.
+
+Help Harsh find the total number of words in the book.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers on a single line, 
+𝑁
+N and 
+𝑀
+M — the number of pages and the number of words on each page, respectively.
+Output Format
+For each test case, output on a new line, the total number of words in the book.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑁
+≤
+100
+1≤N≤100
+1
+≤
+𝑀
+≤
+100
+1≤M≤100
+Sample 1:
+Input
+Output
+4
+1 1
+4 2
+2 4
+95 42
+1
+8
+8
+3990
+Explanation:
+Test case 
+1
+1: The book consists of only 
+1
+1 page, and each page has only 
+1
+1 word. Hence, the total number of words is 
+1
+1.
+
+Test case 
+2
+2: The book consists of 
+4
+4 pages, and each page has 
+2
+2 words. Hence, the total number of words is 
+2
++
+2
++
+2
++
+2
+=
+8
+2+2+2+2=8.
+
+Test case 
+3
+3: The book consists of 
+2
+2 pages, and each page has 
+4
+4 words. Hence, the total number of words is 
+4
++
+4
+=
+8
+4+4=8.
+
+Test case 
+4
+4: The book consists of 
+95
+95 pages, and each page has 
+42
+42 words. Hence, the total number of words is 
+3990
+3990.
+
+ANSWER:
+t=int(input())
+for i in range(t):
+    n,m=map(int,input().split())
+    print(n*m)
+
+08)Battery Health
+Apple considers any iPhone with a battery health of 
+80
+%
+80% or above, to be in optimal condition.
+
+Given that your iPhone has 
+𝑋
+%
+X% battery health, find whether it is in optimal condition.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+The first and only line of each test case contains an integer 
+𝑋
+X — the battery health.
+Output Format
+For each test case, output on a new line, YES, if the battery is in optimal condition, and NO otherwise.
+
+You may print each character in uppercase or lowercase. For example, NO, no, No and nO, are all considered identical.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+0
+≤
+𝑋
+≤
+100
+0≤X≤100
+Sample 1:
+Input
+Output
+4
+97
+42
+80
+10
+YES
+NO
+YES
+NO
+Explanation:
+Test case 
+1
+1: The battery health is 
+97
+%
+97% which is greater than equal to 
+80
+%
+80%. Thus, the battery is in optimal condition.
+
+Test case 
+2
+2: The battery health is 
+42
+%
+42% which is less than 
+80
+%
+80%. Thus, the battery is not in optimal condition.
+
+Test case 
+3
+3: The battery health is 
+80
+%
+80% which is greater than equal to 
+80
+%
+80%. Thus, the battery is in optimal condition.
+
+Test case 
+4
+4: The battery health is 
+10
+%
+10% which is less than 
+80
+%
+80%. Thus, the battery is not in optimal condition.
+
+ANSWER:
+for _ in range(int(input())):
+    n=int(input())
+    if(n>=80):
+        print("YES")
+    else:
+        print("NO")
+
+09)Tom and Jerry Chase
+In a classic chase, Tom is running after Jerry as Jerry has eaten Tom's favourite food.
+
+Jerry is running at a speed of 
+𝑋
+X metres per second while Tom is chasing him at a speed of 
+𝑌
+Y metres per second. Determine whether Tom will be able to catch Jerry.
+
+Note that initially Jerry is not at the same position as Tom.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers 
+𝑋
+X and 
+𝑌
+Y — the speeds of Jerry and Tom respectively.
+Output Format
+For each test case, output on a new line, YES, if Tom will be able to catch Jerry. Otherwise, output NO.
+
+You can print each character in uppercase or lowercase. For example NO, no, No, and nO are all considered the same.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑋
+,
+𝑌
+≤
+10
+1≤X,Y≤10
+Sample 1:
+Input
+Output
+4
+2 3
+4 1
+1 1
+3 5
+YES
+NO
+NO
+YES
+Explanation:
+Test case 
+1
+1: Jerry is running at the speed of 
+2
+2 metres per second while Tom is chasing him at the speed of 
+3
+3 metres per second. Since Jerry's speed is less than Tom's, Tom will eventually catch Jerry.
+
+Test case 
+2
+2: Jerry is running at the speed of 
+4
+4 metres per second while Tom is chasing him at the speed of 
+1
+1 metres per second. Since Jerry's speed is higher than Tom's, Tom will never be able to catch Jerry.
+
+Test case 
+3
+3: Jerry is running at the speed of 
+1
+1 metre per second while Tom is chasing him at the speed of 
+1
+1 metre per second. Since Jerry's speed is same as that of Tom's and both of them are not at the same position, Tom will never be able to catch Jerry.
+
+Test case 
+4
+4: Jerry is running at the speed of 
+3
+3 metres per second while Tom is chasing him at the speed of 
+5
+5 metres per second. Since Jerry's speed is less than Tom's, Tom will eventually catch Jerry.
+
+ANSWER:
+t=int(input())
+for i in range(t):
+    X,Y=map(int,input().split())
+    if(X<Y):
+        print("YES")
+    else:
+        print("NO")
+10)Ageing
+Chef's current age is 
+20
+20 years, while Chefina's current age is 
+10
+10 years.
+Determine Chefina's age when Chef will be 
+𝑋
+X years old.
+
+Note: Assume that Chef and Chefina were born on same day and same month (just different year).
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of a single integer 
+𝑋
+X, the age of Chef.
+Output Format
+For each test case, output Chefina's age when Chef will be 
+𝑋
+X years old.
+
+Constraints
+1
+≤
+𝑇
+≤
+25
+1≤T≤25
+25
+≤
+𝑋
+≤
+50
+25≤X≤50
+Sample 1:
+Input
+Output
+4
+25
+36
+50
+44
+15
+26
+40
+34
+Explanation:
+Test case 
+1
+1: Chefina is 
+10
+10 years old when Chef is 
+20
+20 years old. Thus, when Chef would be 
+25
+25, Chefina would be 
+15
+15.
+
+Test case 
+2
+2: Chefina is 
+10
+10 years old when Chef is 
+20
+20 years old. Thus, when Chef would be 
+36
+36, Chefina would be 
+26
+26.
+
+Test case 
+3
+3: Chefina is 
+10
+10 years old when Chef is 
+20
+20 years old. Thus, when Chef would be 
+50
+50, Chefina would be 
+40
+40.
+
+Test case 
+4
+4: Chefina is 
+10
+10 years old when Chef is 
+20
+20 years old. Thus, when Chef would be 
+44
+44, Chefina would be 
+34
+34.
+ANSWER:
+for i in range(int(input())):
+    x = int(input())
+    print(x-10)
+
+    
+
+
+
